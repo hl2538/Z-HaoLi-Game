@@ -14,7 +14,6 @@ public class GUI {
 	
 	public static void main(String[] args) {
 		GUI gui = new GUI();
-		gui.init();
 		gui.show();
 		gui.update(1, "client");
 		gui.show();
@@ -22,9 +21,6 @@ public class GUI {
 	
 	public GUI() {
 		gui = new LinkedList<>();
-	}
-	
-	public void init() {
 		for(int i=0; i<LENGTH; i++) {
 			if((i+1)%4 ==0) {
 				gui.add(SHAPE_STRIP);
@@ -50,6 +46,10 @@ public class GUI {
 			System.out.print(gui.get(i));
 		}
 		System.out.print("\n");
+	}
+	
+	public  LinkedList<String>get() {
+		return this.gui;
 	}
 
 }
